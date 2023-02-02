@@ -18,27 +18,29 @@ class DatabaseSeeder extends Seeder
     {
          User::factory(5)->create();
 
-         Listing::create([
-             'title'=>'Laravel Senior Developer',
-             'tags'=> 'Laravel,Javascript',
-             'company'=>'Acme Corp',
-             'location'=>'Boston, MA',
-             'email'=>'email@email.com',
-             'website'=>'https://www.acme.com',
-             'description'=>'Elitr sadipscing feugait intellegebat
-              inani elitr imperdiet cu docendi.'
-         ]);
+         Listing::factory(6)->create();
 
-        Listing::create([
-            'title'=>'Full-Stack Engineer',
-            'tags'=> 'Laravel,api, backend',
-            'company'=>'Stark Industries',
-            'location'=>'Dallas, MA',
-            'email'=>'rufus.walker@example.com',
-            'website'=>'https://www.stark.com',
-            'description'=>'Elitr kolokl feugait intellegebat
-              inani elitr imperdiet cu docendi.'
-        ]);
+//         Listing::create([
+//             'title'=>'Laravel Senior Developer',
+//             'tags'=> 'Laravel,Javascript',
+//             'company'=>'Acme Corp',
+//             'location'=>'Boston, MA',
+//             'email'=>'email@email.com',
+//             'website'=>'https://www.acme.com',
+//             'description'=>'Elitr sadipscing feugait intellegebat
+//              inani elitr imperdiet cu docendi.'
+//         ]);
+//
+//        Listing::create([
+//            'title'=>'Full-Stack Engineer',
+//            'tags'=> 'Laravel,api, backend',
+//            'company'=>'Stark Industries',
+//            'location'=>'Dallas, MA',
+//            'email'=>'rufus.walker@example.com',
+//            'website'=>'https://www.stark.com',
+//            'description'=>'Elitr kolokl feugait intellegebat
+//              inani elitr imperdiet cu docendi.'
+//        ]);
 
 
 
