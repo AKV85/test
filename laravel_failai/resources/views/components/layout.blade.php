@@ -47,7 +47,7 @@
 </nav>
 
 <main>
-@yield('content')
+{{$slot}}
 </main>
 <footer
     class="fixed bottom-0 left-0 w-full flex items-center
