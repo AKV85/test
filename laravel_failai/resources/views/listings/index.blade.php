@@ -13,7 +13,7 @@
             @endforeach
 
         @else
-            <p>No listings found</p>
+            <p>Nėra tokio puslapio</p>
         @endunless
     </div>
 @</x-layout>

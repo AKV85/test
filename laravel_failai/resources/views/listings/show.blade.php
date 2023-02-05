@@ -1,7 +1,7 @@
 <x-layout>
     @include('partials._search')
     <a href="/" class="inline-block text-black ml-4 mb-4"
-    ><i class="fa-solid fa-arrow-left"></i> Back
+    ><i class="fa-solid fa-arrow-left"></i> Atgal
     </a>
     <div class="mx-4">
         <x-card class="p-2">
@@ -33,7 +33,7 @@
                         <a href="mailto:{{$listing->email}}"
                            class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80">
                             <i class="fa-solid fa-envelope"></i>
-                            Šokio dėstytojo kontaktai
+                            Parašyk mums
                         </a>
 
                         <a href="{{$listing->website}}"
@@ -41,7 +41,7 @@
                            class="block bg-black text-white py-2 rounded-xl hover:opacity-80">
                             <i class="fa-solid fa-globe">
                             </i>
-                            Dėstytojo portfolio
+                           Mūsų tinklalapis
                         </a>
                     </div>
                 </div>

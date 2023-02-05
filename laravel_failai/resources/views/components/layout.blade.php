@@ -57,12 +57,14 @@
     <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
     <a
-        href="create.html"
+        href="/listings/create"
         class="absolute top-1/3 right-10 bg-black text-white
          py-2 px-5"
-    >Parašyk mums</a
+    >Darbo skelbimo sukūrimas</a
     >
 </footer>
+
+<x-flash-message />
 </body>
 </html>
 
