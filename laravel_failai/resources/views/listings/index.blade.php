@@ -16,4 +16,8 @@
             <p>Nėra tokio puslapio</p>
         @endunless
     </div>
-@</x-layout>
+
+    <div class="mt-6 p-4">
+        {{$listings->links()}}
+    </div>
+</x-layout>

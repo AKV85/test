@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ListingController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +13,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//index
+//show
+//create
+//store
+//edit
+//update
+//delete
+
 //all listings
 Route::get('/',[ListingController::class, 'index']);
+//
+////single listing
+//Route::get('/listings/{listing}',
+//    [ListingController::class,'show']);
 
 //show create form
 Route::get('/listings/create',
@@ -25,12 +36,23 @@ Route::get('/listings/create',
 Route::post('/listings',
     [ListingController::class,'store']);
 
+//show edit form
+Route::get('/listings/{listing}/edit',
+    [ListingController::class,'edit']);
+
+//Edit submit to Update
+Route::put('/listings/{listing}',
+    [ListingController::class,'update']);
 
 
+//Delete Listing
+Route::delete('/listings/{listing}',
+    [ListingController::class,'destroy']);
 
 //single listing
 Route::get('/listings/{listing}',
     [ListingController::class,'show']);
+
 
 
 
