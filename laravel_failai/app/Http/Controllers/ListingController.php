@@ -40,6 +40,7 @@ class ListingController extends Controller
             store('logos', 'public');
         }
 
+        $formFields['user_id'] = auth()->id();
         Listing::create($formFields);
 
 //        Session::flash('message', 'Listing Created');
@@ -64,6 +65,11 @@ class ListingController extends Controller
 //    update Listing data
     public function update(Request $request,Listing $listing)
     {
+//        make sure logged in user is owner
+        if($listing->user_id != auth()->id()) {
+            abort(403,'Unauthorized Action');
+        }
+
         $formFields = $request->validate([
             'title' => 'required',
             'company' => ['required'],
@@ -78,6 +84,7 @@ class ListingController extends Controller
             store('logos', 'public');
         }
 
+
         $listing->update($formFields);
 
          return back()->with('message', 'Įrašas sėkmingai atnaujintas!');
@@ -85,8 +92,18 @@ class ListingController extends Controller
 //delete Listing
     public function destroy(Listing $listing)
     {
+        //        make sure logged in user is owner
+        if($listing->user_id != auth()->id()) {
+            abort(403,'Unauthorized Action');
+        }
+
         $listing->delete();
         return redirect('/')->with('message', 'Įrašas sėkmingai istrintas');
+    }
+
+    public function manage(){
+        return view('listings.manage',['listings'=>
+            auth()->user()->listings()->get()]);
     }
 
 }
